@@ -1,7 +1,12 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import * as React from 'react'
 import Link from 'next/link'
 
-const Header = ({ pathname }) => (
+type Header = {
+  pathname: string
+}
+
+const Header = ({ pathname }: Header): JSX.Element => (
   <header>
     <Link href="/">
       <a className={pathname === '/' ? 'is-active' : ''}>Home</a>
